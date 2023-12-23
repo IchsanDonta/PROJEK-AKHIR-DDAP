@@ -1,0 +1,484 @@
+:root {
+    --Aksen: #425466;
+        --Neutral1: #e8e8e8;
+        --Neutral2: #171717;
+        --Neutrel3: #242424;
+        --White: #ffffff;
+        --secondary: #171931;
+
+
+  }
+  
+  * {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--ColorWhite);
+    color: var(--ColorBlack);
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-y: auto;   /* Enable vertical scrolling */
+  
+  }
+  
+  
+  /* Navbar Start */
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .navbar.scrolled {
+    background: var(--Neutrel3);
+    transition: background-color 0.6s ease;
+  }
+  
+  .navbar .navbar-menu ul {
+    display: flex;
+    order: 2;
+  }
+  
+  /* Style for the logo */
+  .navbar-logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 70px;
+  
+  }
+  
+  /* Style for the navigation menu */
+  .navbar-menu {
+    font-size: auto;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    padding: auto;
+  }
+  
+  .navbar.navbar-logo {
+    max-width: 100%;
+    min-height: 40px;
+    max-height: 40px;
+  }
+  
+  .navbar .navbar-menu a {
+    padding-bottom:0.5rem ;
+    color: var(--White);
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .navbar .navbar-menu a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 0.2rem solid var(--White);
+    transform: scaleX(0);
+    transition: transform 0.3s ease, border-color 0.2s ease;
+    /* Ditambahkan transisi warna batas */
+  }
+  
+  .navbar .navbar-menu a:hover::after,
+  .navbar .navbar-menu a:focus::after,
+  /* fungsi fokus jika di klik item border tetap */
+  .navbar .navbar-menu a:active::after {
+    transform: scaleX(1);
+    border-color: var(--White);
+  }
+  
+  .navbar .navbar-menu a:hover,
+  .navbar .navbar-menu a:focus,
+  /* fungsi fokus jika di klik item border tetap */
+  .navbar .navbar-menu a:active {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+  .navbar-button {
+    display: flex;
+    gap: 2rem;
+    font-weight: 300;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .navbar-button a {
+    display: flex;
+    align-items: center; 
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5rem 1.4rem;
+    border-radius: 100px;
+    justify-content: center;
+  }
+  
+  #ichbutton {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    margin: auto;
+    
+  }
+  
+#esbmerchbutton{
+    background: rgba(255, 255, 255, 0.24);
+}
+
+  #esbmerchbutton ,a{
+    font-size: 1rem;
+    gap: 0.2rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    color: var(--White);
+    height: 100%;
+    
+  }
+  
+  /* Active (clicked) */
+  #Lesbmerchbutton:active {
+    background-color: var(--Tertiary);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+        height: 100%;
+  }
+
+  /* Hero Section Start */
+  .herobg {
+    position: relative;
+    height: auto;
+    
+  }
+  
+  .gradientbg {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .heroimg {
+    min-height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    background: url('./assets/header-img1.png') center/cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 0px 0px 0px 120px;
+  }
+  
+  .herosection {
+    width: 100%;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+ 
+    height: 100%;
+  }
+  
+  .col-left {
+    margin-top: 15rem;
+    padding-left: 15%;
+    text-align: left;
+    z-index: 1;
+    color: var(--ColorWhite); /* Pastikan variabel ini telah didefinisikan sebelumnya */
+  }
+  .col-left h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .col-left h1 {
+    font-size: 6.5rem;
+  }
+  
+  .col-left p span {
+
+    color: var(--Tertiary); /* Pastikan variabel ini telah didefinisikan sebelumnya */
+    font-weight: 600;
+    }
+
+  
+  .col-left p {
+margin-top: 10rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .selengkapnya-button {
+    display: flex;
+    margin-top: 5rem; /* Sesuaikan margin-top sesuai kebutuhan Anda */
+  }
+  
+  #selengkapnyabutton {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 1rem 1.4rem;
+    border-radius: 100px;
+    background: var(--Aksen);
+    color: var(--White); /* Pastikan variabel ini telah didefinisikan sebelumnya */
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    font-weight: 100;
+  }
+  
+  #icselengkapnya {
+    width: 20px; /* Sesuaikan lebar sesuai kebutuhan Anda */
+    height: 20px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+    margin-left: 5px; /* Sesuaikan margin-left sesuai kebutuhan Anda */
+  }
+  
+
+  .col-left-kenalin img {
+    width: 100%;
+    height: 20%;
+  }
+  
+  .col-right {
+    margin-left: auto;
+    margin-top: auto;
+    width: 80%;
+    height: auto;
+    z-index: 1;
+
+  }
+  
+  
+  .heroimg img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .sponsor h1 {
+    padding: 1.4rem 7%;
+    font-size: 2rem;
+  }
+  
+  .logosponsor {
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logosponsor img {
+    width: 200px; /* Sesuaikan lebar sesuai kebutuhan Anda */
+    height: auto; /* Biarkan tinggi otomatis agar rasio gambar tetap */
+    margin-right: 70px
+  }
+  
+  
+  .kenalin {
+    margin-top: 15rem;
+    display: flex;
+    padding: 1.4rem 7%;
+  }
+
+ .col-left-kenalin img{
+width: 100%;
+height: auto;
+
+  }
+
+  .col-right-kenalin h1{
+    text-align: center;
+    }
+
+
+    .col-right-kenalin h2{
+    text-align: center;
+    }
+
+    .col-right-kenalin p{
+        margin-top: 3rem;
+        }
+    
+
+  .col-right-kenalin{
+    width: 100%;
+    height: auto;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: auto;
+      }
+
+      
+  .selengkapnya-button2 {
+    display: flex;
+    margin-top: 20%;
+  }
+  
+  #selengkapnyabutton2 {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 1rem 1.4rem;
+    border-radius: 100px;
+    background: var(--Aksen);
+    color: var(--White); /* Pastikan variabel ini telah didefinisikan sebelumnya */
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    font-weight: 100;
+  }
+  
+  #icselengkapnya2 {
+    width: 100; /* Sesuaikan lebar sesuai kebutuhan Anda */
+    height: 20px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+    margin-left: 5px; /* Sesuaikan margin-left sesuai kebutuhan Anda */
+  }
+
+  .SectionTitle {
+    margin-top: 13rem;
+    text-align: center;
+  }
+
+  .section {
+    margin-top: 5rem;
+    gap: 8rem;
+    padding: 1rem;
+    width: 75%; /* Mengurangi lebar agar tidak 100% */
+    margin-left: auto; /* Membuat elemen berada di tengah */
+    margin-right: auto; /* Membuat elemen berada di tengah */
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .section img {
+    width: 120%; /* Ubah ukuran gambar menjadi lebih besar */
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-left: 10px;
+  }
+  
+  /* Media query untuk layar berukuran kecil */
+  @media only screen and (max-width: 768px) {
+    .section {
+      padding: 0.5rem;
+    }
+  
+    .section img {
+      border-radius: 5px;
+      width: 100%; /* Mengisi lebar kontainer pada layar kecil */
+    }
+  }
+/* Style untuk bagian content */
+.content {
+  margin-top: 10rem;
+}
+
+/* Style untuk div dengan class contentbg */
+.contentbg {
+  padding: 10px; /* Atur padding sesuai kebutuhan */
+}
+
+/* Style untuk gambar dengan class contentevent */
+.contentevent {
+  max-width: 100%; /* Agar gambar tidak melebihi lebar parentnya */
+  height: auto; /* Agar gambar tetap proporsional */
+  display: block; /* Agar gambar tidak memiliki margin bawah */
+  margin: 0 auto; /* Agar gambar berada di tengah */
+}
+
+/* Opsi tambahan: Membuat gambar responsif */
+@media (max-width: 768px) {
+  .contentevent {
+    width: 100%; /* Mengisi lebar parent pada layar kecil */
+  }
+}
+
+/* Apply basic styling to the content div */
+div.content {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Clear floats within the content div */
+}
+
+/* Style the image within the content div */
+img.content {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the contentimg div */
+div.contentimg {
+  margin-top: 10px;
+}
+
+/* footer */
+
+.footer {
+  margin-top: 10rem;
+}
+
+
+
+/* Style untuk gambar dengan class contentevent */
+.contentevent {
+  height: auto; /* Agar gambar tetap proporsional */
+  display: block; /* Agar gambar tidak memiliki margin bawah */
+  margin: 0 auto; /* Agar gambar berada di tengah */
+}
+
+/* Opsi tambahan: Membuat gambar responsif */
+@media (max-width: 768px) {
+  .contentevent {
+    width: 100%; /* Mengisi lebar parent pada layar kecil */
+  }
+}
+
+/* Apply basic styling to the content div */
+div.footer {
+  margin: 0;
+
+  overflow: hidden; /* Clear floats within the content div */
+}
+
+/* Style the image within the content div */
+img.footer {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the contentimg div */
+div.footer {
+  margin-top: 5px;
+}
+
+
+
+
+
